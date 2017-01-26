@@ -3,11 +3,18 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?
-A: *(Student should provide answer here)*
+The goal of constraint propagation is to extract the maximum information out of our constraints. Here, our constraint propagation algorithm was already composed of two functions (elimination and only choice), but we add a third one called naked twins that can further reduce the search space and therefore speed up the solving process. 
+
+Our naked twins function can remove values in a box given local knowledge. If two units have the same two possibility {'A1': '12', ‘A2':'12', …} then we know that 1 and 2 must be in one of these two boxes and not somewhere else. Therefore we can eliminate 1 and 2 from all other boxes in the row A.
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?
-A: *(Student should provide answer here)*
+Solving the diagonal sudoku was very similar than solving the basic Sudoku as we use the same functions. What has changed is the set of constraints we tell our algorithm to follow in the beginning. Now, not only we have constraints in term of lines, rows, and squares, but also in diagonal. 
+
+Constraint propagation enables us to reduce the search space by gathering all the constraints that need to be fulfilled together. As each local constraint introduces further constraints for the rest of the board, we can narrow the probability of many boxes. 
+
+Constraint propagation is mainly implemented by the combination of the function (also called strategy) elimination and only choice. Then we use the function search to complete the board. 
+
 
 ### Install
 

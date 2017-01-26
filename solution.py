@@ -1,5 +1,11 @@
 assignments = []
 
+# import sys
+# sys.path.append("/Users/ludovicbenistant/Desktop/AIND-Sudoku")
+# from visualize import * # ouai mais si tu as une double function t'es niké
+# import visualize
+
+
 def assign_value(values, box, value):
     """
     Please use this function to update your values dictionary!
